@@ -164,9 +164,9 @@ Mixins.of(bucket).apply(new CfnBucketPropsMixin(
 Property mixins are available for all AWS services:
 
 ```typescript
-import { CfnLogGroupPropsMixin } from '@aws-cdk/mixins-preview/aws_logs/mixins';
-import { CfnFunctionPropsMixin } from '@aws-cdk/mixins-preview/aws_lambda/mixins';
-import { CfnTablePropsMixin } from '@aws-cdk/mixins-preview/aws_dynamodb/mixins';
+import { CfnLogGroupPropsMixin } from '@aws-cdk/mixins-preview/aws-logs/mixins';
+import { CfnFunctionPropsMixin } from '@aws-cdk/mixins-preview/aws-lambda/mixins';
+import { CfnTablePropsMixin } from '@aws-cdk/mixins-preview/aws-dynamodb/mixins';
 ```
 
 ## Error Handling

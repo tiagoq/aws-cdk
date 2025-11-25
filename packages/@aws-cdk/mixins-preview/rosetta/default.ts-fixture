@@ -5,10 +5,10 @@ import * as logs from 'aws-cdk-lib/aws-logs';
 import * as dynamodb from 'aws-cdk-lib/aws-dynamodb';
 import '@aws-cdk/mixins-preview/with';
 // for testing purposes, ensure this import works
-import { mixins as alexa_mixins } from '@aws-cdk/mixins-preview/alexa_ask';
+import { mixins as alexa_mixins } from '@aws-cdk/mixins-preview/alexa-ask';
 import { ConstructSelector, Mixins, Mixin, IMixin } from '@aws-cdk/mixins-preview/core';
 import { PropertyMergeStrategy } from '@aws-cdk/mixins-preview/mixins';
-import { AutoDeleteObjects, EnableVersioning, CfnBucketPropsMixin } from '@aws-cdk/mixins-preview/aws_s3/mixins';
+import { AutoDeleteObjects, EnableVersioning, CfnBucketPropsMixin } from '@aws-cdk/mixins-preview/aws-s3/mixins';
 
 declare const scope: Construct;
 
