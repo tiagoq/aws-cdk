@@ -616,22 +616,10 @@ export class ImagePipeline extends ImagePipelineBase {
   public readonly infrastructureConfiguration: IInfrastructureConfiguration;
 
   /**
-   * The deployment identifier of the pipeline, utilized to initiate new image pipeline executions.
-   *
-   * @attribute
-   */
-  public readonly imagePipelineDeploymentId: string;
-
-  /**
    * The execution role used for the image build. If there is no execution role, then the build will be executed with
    * the AWSServiceRoleForImageBuilder service-linked role.
    */
   public readonly executionRole?: iam.IRole;
-
-  /**
-   * @internal
-   */
-  public readonly _recipe: IRecipeBase;
 
   private readonly props: ImagePipelineProps;
 
@@ -654,7 +642,6 @@ export class ImagePipeline extends ImagePipelineBase {
     this.validateImagePipelineName();
 
     this.props = props;
-    this._recipe = props.recipe;
 
     this.infrastructureConfiguration =
       props.infrastructureConfiguration ?? new InfrastructureConfiguration(this, 'InfrastructureConfiguration');
@@ -706,7 +693,6 @@ export class ImagePipeline extends ImagePipelineBase {
       resource: 'image-pipeline',
       resourceName: this.physicalName,
     });
-    this.imagePipelineDeploymentId = imagePipeline.attrDeploymentId;
   }
 
   /**
